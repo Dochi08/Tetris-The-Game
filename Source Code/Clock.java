@@ -46,7 +46,7 @@ public class Clock {
 	 * @param cyclesPerSecond The number of cycles per second.
 	 */
 	public void setCyclesPerSecond(float cyclesPerSecond) {
-		this.millisPerCycle = (1.0f / cyclesPerSecond) * 1000;
+		this.millisPerCycle = (0.5f / cyclesPerSecond) * 1000;
 	}
 	
 	/**
@@ -133,7 +133,7 @@ public class Clock {
 	 * @return The current time in milliseconds.
 	 */
 	private static final long getCurrentTime() {
-		return (System.nanoTime() / 1000000L);
+		return (System.nanoTime() / 100000L);
 	}
 
 }
